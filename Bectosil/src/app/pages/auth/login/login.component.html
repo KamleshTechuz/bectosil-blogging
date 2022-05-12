@@ -1,0 +1,50 @@
+<div class="container p-5 d-flex justify-content-center">
+  <div class="card shadow-lg p-5">
+    <div class="pb-4 text-center">
+      <h1>Welcome to Bectosil</h1>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="row mb-4">
+        <div class="col d-grid mt-4">
+          <a href="#"> Forget password </a>
+        </div>
+      </div>
+      <div class="col d-grid mt-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <div class="pt-5 text-center">
+      <p>
+        Don't have account?
+        <a [routerLink]="CONSTANTS.navigateToSignup">Register</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- <div class="h-100 row align-items-center">
+    <div class="col" style="background:red">
+      TEXT
+    </div>
+  </div> -->

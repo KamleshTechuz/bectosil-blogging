@@ -1,0 +1,85 @@
+<div class="container pt-5">
+  <form action="">
+    <div class="row">
+      <div class="col-auto">
+        <select
+          (change)="getMyPosts($event)"
+          class="form-select"
+          id="inputGroupSelect02"
+        >
+          <option value="all" selected>All</option>
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <select
+          (change)="getMyPosts($event)"
+          class="form-select"
+          id="inputGroupSelect02"
+        >
+          <option value="atoz" selected>A to Z</option>
+          <option value="ztoa">Z to A</option>
+          <option value="latest">Latest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container pt-5">
+  <div class="list-group">
+    <div class="" *ngFor="let blog of blogs">
+      <li class="shadow-lg rounded list-group-item">
+        <div class="pt-2 d-flex">
+          <img
+            class="rounded"
+            style="width: 60px; height: 80px"
+            src="../../../../assets/img/profile/profile_pic.jpeg"
+            alt=""
+          />
+          <div class="px-4">
+            <h3>{{ user.firstname }}</h3>
+            <p>{{ user.email }}</p>
+          </div>
+          <div class="p-5 d-flex position-absolute top-0 end-0">
+            <div class="row">
+              <div class="col">
+                <p class="text-info">{{ blog.view }}</p>
+              </div>
+              <div class="col-auto"><p class="text-muted">2 hour ago</p></div>
+              <div class="col-auto">
+                <ul class="nav">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                    <i style="font-size: 30px; color: gray;" class='bx bx-dots-vertical-rounded'></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Delete</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <hr />
+        <div class="pt-4">
+          <h1>{{ blog.title }}</h1>
+          <p>{{ blog.content }}</p>
+        </div>
+      </li>
+      <br />
+    </div>
+  </div>
+</div>

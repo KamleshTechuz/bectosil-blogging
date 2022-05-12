@@ -1,0 +1,78 @@
+<div class="sidebar">
+  <div class="logo_content">
+    <div class="logo">
+      <i class='bx bx-bitcoin' ></i>
+      <div class="logo_name">Bectosil</div>
+    </div>
+  </div>
+  <ul class="nav_list">
+    <li>
+      <i class="bx bx-search"></i>
+      <input type="email" placeholder="Search..." />
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a [routerLink]='CONSTANTS.navigateToHome'>
+        <i class="bx bx-home-alt-2"></i>
+        <span class="links_name">Home</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a [routerLink]='CONSTANTS.navigateToMyBlogs'>
+        <i class='bx bx-book-content' ></i>
+        <span class="links_name">My blogs</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a [routerLink]='CONSTANTS.navigateToCreateBlogs'>
+        <i class="bx bx-pie-chart-alt-2"></i>
+        <span class="links_name">Create</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a href="">
+        <i class="bx bx-folder"></i>
+        <span class="links_name">File manager</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a href="">
+        <i class='bx bx-bell'></i>
+        <span class="links_name">Notification</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a href="">
+        <i class="bx bx-heart"></i>
+        <span class="links_name">Saved</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+    <li>
+      <a [routerLink]='CONSTANTS.navigateToPrifile'>
+        <i class='bx bx-user' ></i>
+        <span class="links_name">Profile</span>
+      </a>
+      <!-- <span class="tooltip">Dashboard</span> -->
+    </li>
+  </ul>
+  <div class="profile_content">
+    <div class="profile">
+      <div class="profile_deatils">
+        <img src="../../../assets/img/profile/profile_pic.jpeg" alt="" />
+        <div class="name_job">
+          <div class="name">Kamlesh</div>
+          <div class="job">My diaplay name</div>
+        </div>
+      </div>
+      <a (click)="logout()">
+        <i class="bx bx-log-out" id="log_out"></i>
+      </a>
+    </div>
+  </div>
+</div>

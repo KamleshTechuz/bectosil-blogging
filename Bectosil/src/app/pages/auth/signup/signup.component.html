@@ -1,0 +1,64 @@
+<div class="container p-5 d-flex justify-content-center">
+  <div class="card shadow-lg p-5">
+    <div class="pb-4 text-center">
+      <h1>Join the Bectosil</h1>
+    </div>
+    <div class="p-4 text-center text-info">
+        <p><b>Bectosil</b> is a platform to explore your ideas, thoughts, views.</p>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">First name</label>
+        <input formControlName="firstname" type="text" class="form-control" />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Last name</label>
+        <input formControlName="lastname" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Confirm password</label
+        >
+        <input
+          formControlName="confirmPass"
+          type="password"
+          class="form-control"
+        />
+      </div>
+      <div class="row mb-4">
+        <div class="col d-grid mt-4">
+          <a href="#"> Forget password </a>
+        </div>
+      </div>
+      <div class="col d-grid mt-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <div class="pt-5 text-center">
+      <p>
+        Already have an account?
+        <a [routerLink]="CONSTANTS.navigateToLogin">Login</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- <div class="h-100 row align-items-center">
+      <div class="col" style="background:red">
+        TEXT
+      </div>
+    </div> -->
